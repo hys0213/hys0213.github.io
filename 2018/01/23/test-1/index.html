@@ -3,20 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>test | hysblog</title>
+  <title>testdad | hysblog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="css" />
   
   
   
-  <meta property="og:type" content="article">
-<meta property="og:title" content="test">
+  
+  <meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="testdad">
 <meta property="og:url" content="http://hys0213.github.io/2018/01/23/test-1/index.html">
 <meta property="og:site_name" content="hysblog">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-01-23T11:53:15.402Z">
+<meta property="og:updated_time" content="2018-01-23T12:15:05.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
+<meta name="twitter:title" content="testdad">
   
     <link rel="alternate" href="/atom.xml" title="hysblog" type="application/atom+xml">
   
@@ -53,10 +56,32 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -79,13 +104,13 @@
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives/">归档</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories/">类别</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">类别</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags/">标签</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about/">关于</a> </li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
                     
               </ul>
             </div>
@@ -109,7 +134,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      test
+      testdad
     </h1>
   
 
@@ -121,7 +146,10 @@
 	  <time datetime="2018-01-23T11:53:15.000Z" itemprop="datePublished">January 23, 2018</time>
 	</a>
 
-       
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/12121/">12121</a>
+ 
       
 	<span id="busuanzi_container_page_pv">
 	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
@@ -135,7 +163,13 @@
     </div>
     <footer class="entry-meta entry-footer">
       
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/12121/">12121</a>
+
       
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
       
         
 	<div id="comment">
@@ -199,13 +233,13 @@
   
     <a href="/" class="mobile-nav-link">首页</a>
   
-    <a href="/archives/" class="mobile-nav-link">归档</a>
+    <a href="/archives" class="mobile-nav-link">归档</a>
   
-    <a href="/categories/" class="mobile-nav-link">类别</a>
+    <a href="/categories" class="mobile-nav-link">类别</a>
   
-    <a href="/tags/" class="mobile-nav-link">标签</a>
+    <a href="/tags" class="mobile-nav-link">标签</a>
   
-    <a href="/about/" class="mobile-nav-link">关于</a>
+    <a href="/about" class="mobile-nav-link">关于</a>
   
 </nav> -->
     <footer id="footer" class="site-footer">
@@ -239,6 +273,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
